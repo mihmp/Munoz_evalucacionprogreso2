@@ -51,7 +51,7 @@ void ingresarNotas(float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS]) {
     }
 }
 
-// Ahora lo hago para calcular el promedio de cada estudiante (Subproblema 2)
+// Ahora lo hago para calcular el promedio de cada estudiante (Subproblema 2)//
 void calcularPromedioEstudiante(float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS], float promedioEstudiantes[NUM_ALUMNOS]) {
     for (int i = 0; i < NUM_ALUMNOS; i++) {
         float suma = 0;
@@ -59,6 +59,17 @@ void calcularPromedioEstudiante(float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS]
             suma += calificaciones[i][j];
         }
         promedioEstudiantes[i] = suma / NUM_PROGRESOS;
+    }
+}
+
+//Es de igual manera para calcular el promedio del grupo para cada progreso (Subproblema 3)//
+void calcularPromedioAvance(float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS], float promedioAvances[NUM_PROGRESOS]) {
+    for (int j = 0; j < NUM_PROGRESOS; j++) {
+        float suma = 0;
+        for (int i = 0; i < NUM_ALUMNOS; i++) {
+            suma += calificaciones[i][j];
+        }
+        promedioAvances[j] = suma / NUM_ALUMNOS;
     }
 }
 
