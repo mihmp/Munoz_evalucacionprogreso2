@@ -24,5 +24,24 @@ int main() {
     calcularPromedioAvance(calificaciones, promedioAvances);
     mejorEstudiante = encontrarMejorEstudiante(promedioEstudiantes);
 
+    //#5 Muestro en pantalla los resultados//
+    printf("Promedio de cada estudiante:\n");
+    for (int i = 0; i < NUM_ALUMNOS; i++) {
+        printf("Estudiante %d: %.2f\n", i + 1, promedioEstudiantes[i]);
+    }
+
+    printf("\nPromedio de grupo para cada progreso:\n");
+    for (int j = 0; j < NUM_PROGRESOS; j++) {
+        printf("Avance %d: %.2f\n", j + 1, promedioAvances[j]);
+    }
+
+    printf("\nEl estudiante con el mejor promedio es el Estudiante %d con un promedio de %.2f\n", mejorEstudiante + 1, promedioEstudiantes[mejorEstudiante]);
+
+    return 0;
+}
+
+
+
+
     
 
