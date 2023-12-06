@@ -40,6 +40,16 @@ int main() {
     return 0;
 }
 
+// Uso función para ingresar las notas de cada estudiante (Subproblema 1)//
+void ingresarNotas(float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS]) {
+    for (int i = 0; i < NUM_ALUMNOS; i++) {
+        printf("Ingrese las notas del Estudiante %d:\n", i + 1);
+        for (int j = 0; j < NUM_PROGRESOS; j++) {
+            printf("Avance %d: ", j + 1);
+            scanf("%f", &calificaciones[i][j]);
+        }
+    }
+}
 
 
 
