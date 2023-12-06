@@ -51,6 +51,17 @@ void ingresarNotas(float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS]) {
     }
 }
 
+// Ahora lo hago para calcular el promedio de cada estudiante (Subproblema 2)
+void calcularPromedioEstudiante(float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS], float promedioEstudiantes[NUM_ALUMNOS]) {
+    for (int i = 0; i < NUM_ALUMNOS; i++) {
+        float suma = 0;
+        for (int j = 0; j < NUM_PROGRESOS; j++) {
+            suma += calificaciones[i][j];
+        }
+        promedioEstudiantes[i] = suma / NUM_PROGRESOS;
+    }
+}
+
 
 
     
