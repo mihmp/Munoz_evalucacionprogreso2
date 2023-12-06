@@ -18,3 +18,11 @@ int main() {
     float promedioAvances[NUM_PROGRESOS];
     int mejorEstudiante;
 
+    //#1 Ingresar las calificaciones, calculo de promedios y mejor estudiante//
+    ingresarNotas(calificaciones);
+    calcularPromedioEstudiante(calificaciones, promedioEstudiantes);
+    calcularPromedioAvance(calificaciones, promedioAvances);
+    mejorEstudiante = encontrarMejorEstudiante(promedioEstudiantes);
+
+    
+
